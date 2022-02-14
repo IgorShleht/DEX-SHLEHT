@@ -1,0 +1,114 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.Block {
+  height: 30px;
+  margin-bottom: 5px;
+}
+form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.styled {
+  &:checked ~ div:nth-child(odd) {
+    border: 2px solid blue;
+  }
+  &:checked ~ div:nth-child(even) {
+    border: 2px solid red;
+  }
+  &:checked ~ div:last-child {
+    border: 2px solid green;
+  }
+  &:checked ~ div:nth-child(3) {
+    border: 2px solid black;
+  }
+}
+
+label {
+  font-weight: bold;
+  margin-top: 15px;
+}
+input {
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  &:optional {
+    border: 5px dotted orangered;
+  }
+  &:required {
+    border: 5px solid brown;
+  }
+  &#email:valid {
+    border: 5px solid green;
+  }
+  &#email:invalid {
+    border: 5px solid red;
+  }
+  &#auto_number:valid {
+    border: 5px solid green;
+  }
+  &#auto_number:invalid {
+    border: 5px solid black;
+  }
+}
+
+fieldset {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.back {
+  width: 500px;
+  height: 500px;
+  background: url(./img/smok.png) no-repeat 25% 89%,
+    url(./img/spl3.png) no-repeat 20% 75%, url(./img/slp4.png) no-repeat 91% 75%,
+    url(./img/slp2.png) no-repeat 55% 75%, url(./img/cow.png) no-repeat 10% 90%,
+    url(./img/cow.png) no-repeat 50% 90%, url(./img/cow.png) no-repeat 90% 90%,
+    url(./img/fon.jpg) no-repeat;
+  background-size: 30px, 50px, 50px, 50px, 100px, 100px, 100px, auto;
+}
+
+.block {
+  background: whitesmoke;
+  width: 500px;
+  height: 280px;
+}
+.item {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 1px;
+}
+.checkbox:checked ~ .item {
+  transform: translate(450px, 0);
+}
+.first {
+  background: tomato;
+  transition: all 0.5s ease-out;
+}
+.second {
+  background: gold;
+  transition: all 1s ease-out;
+}
+.third {
+  background: blue;
+  transition: all 1.5s ease-out;
+}
+.fourth {
+  background: green;
+  transition: all 2s ease-out;
+}
+.text {
+  display: none;
+  font-size: 22px;
+}
+.checkbox:checked ~ .text {
+  display: block;
+}
